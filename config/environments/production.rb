@@ -77,4 +77,8 @@ Pinteresting::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Required for Heroku
+  # TODO: Change to actual host if you ever move from Heroku
+  config.action_mailer.default_url_options = { :host => 'railsdemo-pinteresting.herokuapp.com' }
 end
